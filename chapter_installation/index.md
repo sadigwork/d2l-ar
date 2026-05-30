@@ -1,191 +1,219 @@
-# Installation
+# التثبيت
 :label:`chap_installation`
 
-In order to get up and running,
-we will need an environment for running Python,
-the Jupyter Notebook, the relevant libraries,
-and the code needed to run the book itself.
+للبدء والتشغيل،
+سنحتاج إلى بيئة لتشغيل بايثون،
 
-## Installing Miniconda
+ودفتر Jupyter، والمكتبات اللازمة،
 
-Your simplest option is to install
+والكود اللازم لتشغيل الكتاب نفسه.
+
+## تثبيت Miniconda
+
+أسهل خيار هو تثبيت
 [Miniconda](https://conda.io/en/latest/miniconda.html).
-Note that the Python 3.x version is required.
-You can skip the following steps
-if your machine already has conda installed.
 
-Visit the Miniconda website and determine
-the appropriate version for your system
-based on your Python 3.x version and machine architecture.
-Suppose that your Python version is 3.9
-(our tested version).
-If you are using macOS,
-you would download the bash script
-whose name contains the strings "MacOSX",
-navigate to the download location,
-and execute the installation as follows
-(taking Intel Macs as an example):
+لاحظ أن إصدار بايثون 3.x مطلوب.
+
+يمكنك تخطي الخطوات التالية
+إذا كان لديك conda مثبتًا بالفعل على جهازك.
+
+تفضل بزيارة موقع Miniconda الإلكتروني وحدد
+الإصدار المناسب لنظامك
+
+بناءً على إصدار بايثون 3.x لديك وبنية جهازك.
+
+لنفترض أن إصدار بايثون لديك هو 3.9
+
+(الإصدار الذي تم اختباره).
+
+
+إذا كنت تستخدم نظام macOS،
+فستقوم بتنزيل سكربت bash
+الذي يحتوي اسمه على عبارة "MacOSX"،
+ثم تنتقل إلى موقع التنزيل،
+وتنفذ التثبيت كما يلي
+
+(على أجهزة Mac بمعالجات Intel كمثال):
 
 ```bash
-# The file name is subject to changes
+# اسم الملف قابل للتغيير
 sh Miniconda3-py39_4.12.0-MacOSX-x86_64.sh -b
 ```
 
-
-A Linux user
-would download the file
-whose name contains the strings "Linux"
-and execute the following at the download location:
+أما مستخدم Linux،
+فسيقوم بتنزيل الملف
+الذي يحتوي اسمه على عبارة "Linux"
+ثم ينفذ الأمر التالي في موقع التنزيل:
 
 ```bash
-# The file name is subject to changes
+# اسم الملف قابل للتغيير
 sh Miniconda3-py39_4.12.0-Linux-x86_64.sh -b
 ```
 
 
-A Windows user would download and install Miniconda by following its [online instructions](https://conda.io/en/latest/miniconda.html).
-On Windows, you may search for `cmd` to open the Command Prompt (command-line interpreter) for running commands.
+يقوم مستخدمو نظام ويندوز بتنزيل وتثبيت برنامج Miniconda باتباع التعليمات المتاحة على الإنترنت.
 
-Next, initialize the shell so we can run `conda` directly.
+في نظام ويندوز، يمكنك البحث عن `cmd` لفتح موجه الأوامر (مفسر سطر الأوامر) لتنفيذ الأوامر.
+
+بعد ذلك، قم بتهيئة الصدفة لتشغيل `conda` مباشرةً.
 
 ```bash
 ~/miniconda3/bin/conda init
 ```
 
+ثم أغلق الصدفة الحالية وأعد فتحها.
 
-Then close and reopen your current shell.
-You should be able to create
-a new environment as follows:
+
+
+
+ثم أغلق الصدفة الحالية وأعد فتحها. يُفترض أن تتمكن من إنشاء بيئة جديدة كما يلي:
 
 ```bash
 conda create --name d2l python=3.9 -y
 ```
 
-
-Now we can activate the `d2l` environment:
+الآن يُمكننا تفعيل بيئة `d2l`:
 
 ```bash
 conda activate d2l
 ```
 
+## تثبيت إطار عمل التعلم العميق وحزمة `d2l`
 
-## Installing the Deep Learning Framework and the `d2l` Package
+قبل تثبيت أي إطار عمل للتعلم العميق،
+يُرجى أولاً التحقق مما إذا كان لديك
+وحدات معالجة رسومية (GPU) مناسبة على جهازك.
 
-Before installing any deep learning framework,
-please first check whether or not
-you have proper GPUs on your machine
-(the GPUs that power the display
-on a standard laptop are not relevant for our purposes).
-For example,
-if your computer has NVIDIA GPUs and has installed [CUDA](https://developer.nvidia.com/cuda-downloads),
-then you are all set.
-If your machine does not house any GPU,
-there is no need to worry just yet.
-Your CPU provides more than enough horsepower
-to get you through the first few chapters.
-Just remember that you will want to access GPUs
-before running larger models.
+(وحدات معالجة الرسوميات التي تُشغّل الشاشة
+في أجهزة الكمبيوتر المحمولة العادية غير ذات صلة بموضوعنا).
+
+على سبيل المثال،
+إذا كان جهازك يحتوي على وحدات معالجة رسومية من NVIDIA ومُثبّت عليه CUDA،
+
+فأنت جاهز تمامًا.
+
+إذا لم يكن جهازك يحتوي على أي وحدة معالجة رسومية،
+
+فلا داعي للقلق الآن.
+
+يُوفّر مُعالجك المركزي (CPU) قوة كافية
+
+لإنجاز الفصول القليلة الأولى.
 
 
-:begin_tab:`mxnet`
+تذكر فقط أنك ستحتاج إلى الوصول إلى وحدات معالجة الرسومات (GPUs)
+قبل تشغيل النماذج الأكبر حجمًا.
 
-To install a GPU-enabled version of MXNet,
-we need to find out what version of CUDA you have installed.
-You can check this by running `nvcc --version`
-or `cat /usr/local/cuda/version.txt`.
-Assume that you have installed CUDA 11.2,
-then execute the following command:
+
+mxnet
+
+
+لتثبيت نسخة MXNet التي تدعم وحدات معالجة الرسومات،
+
+نحتاج إلى معرفة إصدار CUDA المثبت لديك.
+
+
+يمكنك التحقق من ذلك بتشغيل الأمر `nvcc --version`
+
+
+أو `cat /usr/local/cuda/version.txt`.
+
+
+
+لتثبيت نسخة MXNet التي تدعم وحدات معالجة الرسومات،
+... بافتراض أنك قمت بتثبيت CUDA 11.2،
+
+نفّذ الأمر التالي:
 
 ```bash
-# For macOS and Linux users
+# لمستخدمي macOS وLinux
 pip install mxnet-cu112==1.9.1
 
-# For Windows users
+# لمستخدمي Windows
 pip install mxnet-cu112==1.9.1 -f https://dist.mxnet.io/python
 ```
 
-
-You may change the last digits according to your CUDA version, e.g., `cu101` for
-CUDA 10.1 and `cu90` for CUDA 9.0.
-
-
-If your machine has no NVIDIA GPUs
-or CUDA,
-you can install the CPU version
-as follows:
+يمكنك تغيير الأرقام الأخيرة وفقًا لإصدار CUDA لديك، على سبيل المثال، `cu101` لـ CUDA 10.1 و`cu90` لـ CUDA 9.0.
+... إذا لم يكن جهازك مزودًا بمعالجات رسومية من NVIDIA
+أو CUDA،
+فيمكنك تثبيت إصدار وحدة المعالجة المركزية (CPU)
+كما يلي:
 
 ```bash
 pip install mxnet==1.9.1
 ```
 
-
 :end_tab:
-
 
 :begin_tab:`pytorch`
 
-You can install PyTorch (the specified versions are tested at the time of writing) with either CPU or GPU support as follows:
+يمكنك تثبيت PyTorch (تم اختبار الإصدارات المذكورة وقت كتابة هذا النص) مع دعم وحدة المعالجة المركزية أو وحدة معالجة الرسوميات (GPU) كما يلي:
 
 ```bash
 pip install torch==2.0.0 torchvision==0.15.1
 ```
 
-
 :end_tab:
 
 :begin_tab:`tensorflow`
-You can install TensorFlow with either CPU or GPU support as follows:
+يمكنك تثبيت TensorFlow مع دعم وحدة المعالجة المركزية أو وحدة معالجة الرسوميات (GPU) كما يلي:
 
 ```bash
 pip install tensorflow==2.12.0 tensorflow-probability==0.20.0
 ```
 
-
 :end_tab:
 
 :begin_tab:`jax`
-You can install JAX and Flax with either CPU or GPU support as follows:
+يمكنك تثبيت JAX وFlax مع دعم وحدة المعالجة المركزية (CPU) أو وحدة معالجة الرسومات (GPU) كما يلي:
 
 ```bash
 # GPU
 pip install "jax[cuda11_pip]==0.4.13" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html flax==0.7.0
 ```
 
+إذا لم يكن جهازك مزودًا بوحدات معالجة رسومية من NVIDIA
 
-If your machine has no NVIDIA GPUs
-or CUDA,
-you can install the CPU version
-as follows:
+أو CUDA،
+
+يمكنك تثبيت إصدار وحدة المعالجة المركزية (CPU)
+
+كما يلي:
 
 ```bash
 # CPU
 pip install "jax[cpu]==0.4.13" flax==0.7.0
 ```
 
-
 :end_tab:
 
+الخطوة التالية هي تثبيت
+حزمة `d2l` التي قمنا بتطويرها
 
-Our next step is to install
-the `d2l` package that we developed
-in order to encapsulate
-frequently used functions and classes
-found throughout this book:
+لتضمين
+الدوال والفئات الأكثر استخدامًا
+
+الموجودة في هذا الكتاب:
 
 ```bash
 pip install d2l==1.0.3
 ```
 
 
-## Downloading and Running the Code
+## تنزيل وتشغيل الكود
 
-Next, you will want to download the notebooks
-so that you can run each of the book's code blocks.
-Simply click on the "Notebooks" tab at the top
-of any HTML page on [the D2L.ai website](https://d2l.ai/)
-to download the code and then unzip it.
-Alternatively, you can fetch the notebooks
-from the command line as follows:
+بعد ذلك، ستحتاج إلى تنزيل ملفات دفاتر الملاحظات
+لتتمكن من تشغيل كل جزء من أجزاء الكود الموجودة في كل دفتر.
+
+ما عليك سوى النقر على علامة التبويب "دفاتر الملاحظات" أعلى
+أي صفحة HTML على موقع D2L.ai الإلكتروني
+لتنزيل الكود ثم فك ضغطه.
+
+
+
+بعد ذلك، قم بتنزيل الكود ثم فك ضغطه. بدلاً من ذلك، يمكنك جلب دفاتر الملاحظات
+من سطر الأوامر كما يلي:
 
 :begin_tab:`mxnet`
 
@@ -196,9 +224,7 @@ unzip d2l-en.zip && rm d2l-en.zip
 cd mxnet
 ```
 
-
 :end_tab:
-
 
 :begin_tab:`pytorch`
 
@@ -208,7 +234,6 @@ curl https://d2l.ai/d2l-en-1.0.3.zip -o d2l-en.zip
 unzip d2l-en.zip && rm d2l-en.zip
 cd pytorch
 ```
-
 
 :end_tab:
 
@@ -221,7 +246,6 @@ unzip d2l-en.zip && rm d2l-en.zip
 cd tensorflow
 ```
 
-
 :end_tab:
 
 :begin_tab:`jax`
@@ -233,43 +257,56 @@ unzip d2l-en.zip && rm d2l-en.zip
 cd jax
 ```
 
-
 :end_tab:
 
-If you do not already have `unzip` installed, first run `sudo apt-get install unzip`.
-Now we can start the Jupyter Notebook server by running:
+إذا لم يكن لديك برنامج `unzip` مثبتًا، فقم أولًا بتشغيل الأمر `sudo apt-get install unzip`.
+
+الآن، يُمكننا تشغيل خادم Jupyter Notebook بتشغيل الأمر التالي:
 
 ```bash
 jupyter notebook
 ```
 
+في هذه المرحلة، يُمكنك فتح الرابط http://localhost:8888
 
-At this point, you can open http://localhost:8888
-(it may have already opened automatically) in your web browser.
-Then we can run the code for each section of the book.
-Whenever you open a new command line window,
-you will need to execute `conda activate d2l`
-to activate the runtime environment
-before running the D2L notebooks,
-or updating your packages
-(either the deep learning framework
-or the `d2l` package).
-To exit the environment,
-run `conda deactivate`.
+(قد يكون قد فُتح تلقائيًا) في متصفحك.
+
+ثم يُمكننا تشغيل الكود الخاص بكل قسم من الكتاب.
+
+عند فتح نافذة سطر أوامر جديدة،
+
+ستحتاج إلى تنفيذ الأمر `conda activate d2l`
+
+لتفعيل بيئة التشغيل
+
+قبل تشغيل دفاتر D2L،
+
+أو تحديث حزمك
 
 
-:begin_tab:`mxnet`
-[Discussions](https://discuss.d2l.ai/t/23)
-:end_tab:
+إما إطار عمل التعلم العميق
 
-:begin_tab:`pytorch`
-[Discussions](https://discuss.d2l.ai/t/24)
-:end_tab:
+أو حزمة `d2l`.
 
-:begin_tab:`tensorflow`
-[Discussions](https://discuss.d2l.ai/t/436)
-:end_tab:
 
-:begin_tab:`jax`
-[Discussions](https://discuss.d2l.ai/t/17964)
-:end_tab:
+للخروج من البيئة،
+
+قم بتشغيل الأمر `conda deactivate`.
+
+
+
+إذا لم يكن لديك برنامج `unzip` مثبتًا، فقم بتشغيل الأمر `sudo apt-get install unzip`. `mxnet`
+[مناقشات](https://discuss.d2l.ai/t/23)
+
+
+`pytorch`
+[مناقشات](https://discuss.d2l.ai/t/24)
+
+
+`tensorflow`
+[مناقشات](https://discuss.d2l.ai/t/436)
+
+
+
+`jax`
+[مناقشات](https://discuss.d2l.ai/t/17964)
