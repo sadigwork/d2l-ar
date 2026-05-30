@@ -2,13 +2,13 @@
   <img src="https://raw.githubusercontent.com/d2l-ai/d2l-en/master/static/logo-with-text.png" width="350">
 </div>
 
-# D2L.ai: Interactive Deep Learning Book with Multi-Framework Code, Math, and Discussions
+# D2L.ai: كتاب تفاعلي حول التعلم العميق يتضمن أكوادًا متعددة الأطر، ورياضيات، ومناقشات.
 
-[![Continuous Integration](https://github.com/d2l-ai/d2l-en/actions/workflows/ci.yml/badge.svg)](https://github.com/d2l-ai/d2l-en/actions/workflows/ci.yml)
+[![التكامل المستمر](https://github.com/d2l-ai/d2l-en/actions/workflows/ci.yml/badge.svg)](https://github.com/d2l-ai/d2l-en/actions/workflows/ci.yml)
 
-[Book website](https://d2l.ai/) | [STAT 157 Course at UC Berkeley](http://courses.d2l.ai/berkeley-stat-157/index.html)
+[صفحة الكتاب](https://d2l.ai/) | [STAT 157 كورس جامعة بيركلي UC Berkeley](http://courses.d2l.ai/berkeley-stat-157/index.html)
 
-<h5 align="center"><i>The best way to understand deep learning is learning by doing.</i></h5>
+<h5 align="center"><i>أفضل طريقة لفهم التعلم العميق هي التعلم بالممارسة.</i></h5>
 
 <p align="center">
   <img width="200"  src="static/frontpage/_images/eq.jpg">
@@ -17,39 +17,39 @@
   <img width="200"  src="static/frontpage/_images/notebook.gif">
 </p>
 
-This open-source book represents our attempt to make deep learning approachable, teaching you the concepts, the context, and the code. The entire book is drafted in Jupyter notebooks, seamlessly integrating exposition figures, math, and interactive examples with self-contained code.
+يمثل هذا الكتاب مفتوح المصدر محاولتنا لجعل التعلم العميق في متناول الجميع، حيث يُعلّمكم المفاهيم والسياق والبرمجة. كُتب الكتاب بالكامل باستخدام دفاتر Jupyter، مع دمج سلس للرسوم التوضيحية والمعادلات الرياضية والأمثلة التفاعلية مع شفرة برمجية مستقلة.
 
-Our goal is to offer a resource that could
-1. be freely available for everyone;
-1. offer sufficient technical depth to provide a starting point on the path to actually becoming an applied machine learning scientist;
-1. include runnable code, showing readers how to solve problems in practice;
-1. allow for rapid updates, both by us and also by the community at large;
-1. be complemented by a forum for interactive discussion of technical details and to answer questions.
+هدفنا هو توفير مرجع يُمكنه:
+1. أن يكون متاحًا مجانًا للجميع؛
+1. أن يُقدّم عمقًا تقنيًا كافيًا ليكون نقطة انطلاق نحو احتراف علوم التعلم الآلي التطبيقي؛
+1. أن يتضمن شفرة برمجية قابلة للتنفيذ، تُبيّن للقراء كيفية حلّ المشكلات عمليًا؛
+1. أن يسمح بتحديثات سريعة، من جانبنا ومن جانب المجتمع العلمي؛
+1. أن يُكمّله منتدى للنقاش التفاعلي حول التفاصيل التقنية والإجابة على الأسئلة.
 
-## Universities Using D2L
+## جامعات تستخدم D2L
 <p align="center">
   <img width="600"  src="static/frontpage/_images/map.png">
 </p>
 
 
 
-If you find this book useful, please star (★) this repository or cite this book using the following bibtex entry:
+إذا وجدت هذا الكتاب مفيدًا، فيرجى وضع نجمة (★) على هذا المستودع أو الاستشهاد بهذا الكتاب باستخدام مدخل BibTeX التالي:
 
 ```
 @book{zhang2023dive,
-    title={Dive into Deep Learning},
+    title={انغمس في عالم التعلم العميق},
     author={Zhang, Aston and Lipton, Zachary C. and Li, Mu and Smola, Alexander J.},
-    publisher={Cambridge University Press},
+    publisher={دار نشر جامعة كامبريدج},
     note={\url{https://D2L.ai}},
     year={2023}
 }
 ```
 
 
-## Endorsements
+## التأييدات
 
-> <p>"In less than a decade, the AI revolution has swept from research labs to broad industries to every corner of our daily life.  Dive into Deep Learning is an excellent text on deep learning and deserves attention from anyone who wants to learn why deep learning has ignited the AI revolution: the most powerful technology force of our time."</p>
-> <b>&mdash; Jensen Huang, Founder and CEO, NVIDIA</b>
+> <p>"في أقل من عقد من الزمان، اجتاحت ثورة الذكاء الاصطناعي مختبرات الأبحاث لتشمل قطاعات صناعية واسعة النطاق، وصولًا إلى كل ركن من أركان حياتنا اليومية. يُعد كتاب "الغوص في التعلم العميق" مرجعًا ممتازًا في مجال التعلم العميق، ويستحق اهتمام كل من يرغب في معرفة سبب إشعال التعلم العميق لثورة الذكاء الاصطناعي: القوة التكنولوجية الأقوى في عصرنا."</p>
+> <b>&mdash; جينسن هوانغ، المؤسس والرئيس التنفيذي لشركة NVIDIA</b>
 
 > <p>"This is a timely, fascinating book, providing with not only a comprehensive overview of deep learning principles but also detailed algorithms with hands-on programming code, and moreover, a state-of-the-art introduction to deep learning in computer vision and natural language processing. Dive into this book if you want to dive into deep learning!"</p>
 > <b>&mdash; Jiawei Han, Michael Aiken Chair Professor, University of Illinois at Urbana-Champaign</b>
