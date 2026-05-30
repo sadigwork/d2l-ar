@@ -51,26 +51,28 @@
 > <p>"في أقل من عقد من الزمان، اجتاحت ثورة الذكاء الاصطناعي مختبرات الأبحاث لتشمل قطاعات صناعية واسعة النطاق، وصولًا إلى كل ركن من أركان حياتنا اليومية. يُعد كتاب "الغوص في التعلم العميق" مرجعًا ممتازًا في مجال التعلم العميق، ويستحق اهتمام كل من يرغب في معرفة سبب إشعال التعلم العميق لثورة الذكاء الاصطناعي: القوة التكنولوجية الأقوى في عصرنا."</p>
 > <b>&mdash; جينسن هوانغ، المؤسس والرئيس التنفيذي لشركة NVIDIA</b>
 
-> <p>"This is a timely, fascinating book, providing with not only a comprehensive overview of deep learning principles but also detailed algorithms with hands-on programming code, and moreover, a state-of-the-art introduction to deep learning in computer vision and natural language processing. Dive into this book if you want to dive into deep learning!"</p>
-> <b>&mdash; Jiawei Han, Michael Aiken Chair Professor, University of Illinois at Urbana-Champaign</b>
+> <p>"هذا كتابٌ قيّمٌ وجذّاب، لا يقتصر على تقديم نظرة شاملة على مبادئ التعلّم العميق فحسب، بل يقدّم أيضًا خوارزميات مفصّلة مع أكواد برمجية عملية، بالإضافة إلى مقدمة حديثة في مجال التعلّم العميق في رؤية الحاسوب ومعالجة اللغات الطبيعية. انغمس في هذا الكتاب إذا كنت ترغب في الغوص في عالم التعلّم العميق!"</p>
+> <b>&mdash; جياوي هان، أستاذ كرسي مايكل أيكن، جامعة إلينوي في أوربانا-شامبين</b>
 
-> <p>"This is a highly welcome addition to the machine learning literature, with a focus on hands-on experience implemented via the integration of Jupyter notebooks. Students of deep learning should find this invaluable to become proficient in this field."</p>
-> <b>&mdash; Bernhard Schölkopf, Director, Max Planck Institute for Intelligent Systems</b>
+> <p>"يُعدّ هذا الكتاب إضافةً قيّمةً للغاية إلى أدبيات التعلّم الآلي، مع التركيز على الخبرة العملية المُطبّقة من خلال دمج دفاتر Jupyter. سيجد طلاب التعلّم العميق هذا الكتاب لا غنى عنه ليصبحوا بارعين في هذا المجال."</p>
+> <b>&mdash; برنارد شولكوف، مدير معهد ماكس بلانك للأنظمة الذكية
 
-> <p>"Dive into Deep Learning strikes an excellent balance between hands-on learning and in-depth explanation. I've used it in my deep learning course and recommend it to anyone who wants to develop a thorough and practical understanding of deep learning."</p>
-> <b>&mdash; Colin Raffel, Assistant Professor, University of North Carolina, Chapel Hill</b>
+> <p>"يُحقق كتاب "الغوص في التعلم العميق" توازنًا ممتازًا بين التعلم العملي والشرح المُعمق. لقد استخدمته في دورة التعلم العميق التي أُقدمها، وأُوصي به لكل من يرغب في تطوير فهم شامل وعملي للتعلم العميق."</p>
+> <b>- كولين رافيل، أستاذ مساعد، جامعة نورث كارولينا، تشابل هيل
 
-## Contributing ([Learn How](https://d2l.ai/chapter_appendix-tools-for-deep-learning/contributing.html))
-
-This open source book has benefited from pedagogical suggestions, typo corrections, and other improvements from community contributors. Your help is valuable for making the book better for everyone.
-
-**Dear [D2L contributors](https://github.com/d2l-ai/d2l-en/graphs/contributors), please email your GitHub ID and name to d2lbook.en AT gmail DOT com so your name will appear on the [acknowledgments](https://d2l.ai/chapter_preface/index.html#acknowledgments). Thanks.**
+## المساهمة ([تعرّف على كيفية المساهمة] (https://d2l.ai/chapter_appendix-tools-for-deep-learning/contributing.html))
+استفاد هذا الكتاب مفتوح المصدر من اقتراحات تربوية وتصحيحات للأخطاء المطبعية وتحسينات أخرى من مساهمي المجتمع. مساعدتكم قيّمة لجعل الكتاب أفضل للجميع.
 
 
-## License Summary
+** اعزائي مساهمي D2L
 
-This open source book is made available under the Creative Commons Attribution-ShareAlike 4.0 International License. See [LICENSE](LICENSE) file.
+**اعزائي [مساهمي D2L](https://github.com/d2l-ai/d2l-en/graphs/contributors), يُرجى إرسال مُعرّف GitHub الخاص بك واسمك إلى d2lbook.en AT gmail DOT com ليظهر اسمك في قسم [الشكر والتقدير](https://d2l.ai/chapter_preface/index.html#acknowledgments). شكرا لكم.**
 
-The sample and reference code within this open source book is made available under a modified MIT license. See the [LICENSE-SAMPLECODE](LICENSE-SAMPLECODE) file.
 
-[Chinese version](https://github.com/d2l-ai/d2l-zh) | [Discuss and report issues](https://discuss.d2l.ai/) | [Code of conduct](CODE_OF_CONDUCT.md)
+## ملخص الرخص
+
+هذا الكتاب مفتوح المصدر مُتاح بموجب ترخيص Creative Commons Attribution-ShareAlike 4.0 الدولي. راجع ملف  [الترخيص](LICENSE).
+
+أما نموذج التعليمات البرمجية والرمز المرجعي في هذا الكتاب مفتوح المصدر، فهو مُتاح بموجب ترخيص MIT مُعدّل. راجع ملف [LICENSE-SAMPLECODE](LICENSE-SAMPLECODE).
+
+[النسخة الصينية](https://github.com/d2l-ai/d2l-zh) | [مناقشة المشكلات والإبلاغ عنها](https://discuss.d2l.ai/) | [قواعد السلوك](CODE_OF_CONDUCT.md)
